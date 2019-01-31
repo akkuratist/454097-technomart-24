@@ -9,10 +9,27 @@
     <header class="main-header container">
       <a class="main-header-logo">Техномарт</a>
       <div class="top-menu">
-        <label for="search"><img src="img/svg/icon-search.svg" width="17" height="17" alt="">Поиск:</label>
-        <input type="search" name="search" id="site-search">
-        <a href="#"><img src="img/svg/icon-bookmark.svg" width="17" height="17" alt="">Закладки: 0</a>
-        <a href="#"><img src="img/svg/cart-icon.svg" width="17" height="17" alt="">Корзина: 0</a>
+        <label>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+            <path fill="#231F20" d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
+          </svg>
+          Поиск:
+          <input type="search" name="site-search">
+        </label>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
+            <path fill="#E72C2D" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
+          </svg>
+          Закладки: 0
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <circle cx="4.5" cy="13.5" r="1.5"/>
+            <circle cx="12.5" cy="13.5" r="1.5"/>
+            <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
+          </svg>
+          Корзина: 0
+        </a>
         <a class="btn btn-make-order">Оформить заказ</a>
       </div>
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -22,8 +39,18 @@
       </p>
       <nav class="main-navigation">
         <ul class="user-navigation">
-          <li class="login-link"><a href="#"><img src="img/svg/icon-login.svg" width="17" height="17" alt="">Войти</a></li>
-          <li class="login-link"><a href="#">Регистрация</a></li>
+          <li class="login-link">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17">
+                <path fill="#32425C" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                <path fill="#32425C" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+              </svg>
+              Войти
+            </a>
+          </li>
+          <li class="login-link"><a href="#">Регистрация
+            </a>
+          </li>
         </ul>
         <ul class="site-navigation">
           <li><a>Главная</a></li>
@@ -41,69 +68,69 @@
         <ul class="promo-features-list">
           <li class="promo-item">
             <h2>Материалы</h2>
-            <button class="btn-promo">На любой вкус</button>
+            <a class="btn-promo" href="#">На любой вкус</a>
           </li>
           <li class="promo-item">
             <h2>Инструменты</h2>
-            <button class="btn-promo">На все случаи</button>
+            <a class="btn-promo" href="#">На все случаи</a>
           </li>
           <li class="promo-item">
             <h2>Техника</h2>
-            <button class="btn-promo">Для стройки</button>
+            <a class="btn-promo" href="#">Для стройки</a>
           </li>
           <li class="promo-item">
             <h2>Скидки 50%</h2>
-            <button class="btn-promo">На 350 товаров</button>
+            <a class="btn-promo" href="#">На 350 товаров</a>
           </li>
           <li class="promo-item">
             <h2>Доставка</h2>
-            <button class="btn-promo">Бесплатно</button>
+            <a class="btn-promo" href="#">Бесплатно</a>
           </li>
         </ul>
       </section>
       <section class="slider">
         <button class="slider-btn slider-btn-back">
-          <img src="img/svg/icon-left.svg" width="22" height="40">
+        <img src="img/svg/icon-left.svg" width="22" height="40" alt="Назад">
         </button>
         <button class="slider-btn slider-btn-next">
-          <img src="img/svg/icon-right.svg" width="22" height="40">
+        <img src="img/svg/icon-right.svg" width="22" height="40" alt="Вперед">
         </button>
-       <ul>
-        <li>
-          <figure class="slider-content">
-            <img src="img/slides/slide-1.jpg" width="620" height="266">
-            <figcaption>
-              <h2>Перфораторы</h2>
-              <p>Настоящие мужские игрушки!</p>
-              <a class="btn" href="perforators.html">Открыть каталог</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-           <figure class="slider-content">
-            <img src="img/slides/slide-2.jpg" width="620" height="266">
-            <figcaption>
-              <h2>Дрели</h2>
-              <p>На радость соседям!</p>
-              <a class="btn" href="#">Открыть каталог</a>
-            </figcaption>
-          </figure>
-        </li>
+        <ul>
+          <li>
+            <figure class="slider-content">
+              <img src="img/slides/slide-1.jpg" width="620" height="266">
+              <figcaption>
+                <h2>Перфораторы</h2>
+                <p>Настоящие мужские игрушки!</p>
+                <a class="btn" href="perforators.html">Открыть каталог</a>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="slider-content">
+              <img src="img/slides/slide-2.jpg" width="620" height="266">
+              <figcaption>
+                <h2>Дрели</h2>
+                <p>На радость соседям!</p>
+                <a class="btn" href="#">Открыть каталог</a>
+              </figcaption>
+            </figure>
+          </li>
         </ul>
       </section>
-      <section class="popular-goods">
+      <section class="catalog">
         <div class="header-popular">
           <h2>Популярные товары:</h2>
           <a class="btn" href="#">Все популярные товары</a>
         </div>
-        <ul class="popular-goods-list">
-        <li class="catalog-item">
+        <ul class="catalog-list">
+          <li class="catalog-item">
             <h3><a href="#">Перфоратор BOSCH BFG 9000</a></h3>
             <img src="img/products/bosch/bosch-bfg-9000.jpg" width="220" height="170" alt="Перфоратор Bosch BFG 9000">
             <p class="price-old">32500 Р</p>
             <p class="price-current">25500 Р</p>
           </li>
-         <li class="catalog-item">
+          <li class="catalog-item">
             <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
             <img src="img/products/bosch/bosch-bfg-3000.jpg" width="220" height="170" alt="Перфоратор Bosch BFG 3000">
             <p class="price-old">22500 Р</p>
@@ -123,7 +150,7 @@
         </ul>
       </section>
       <section class="popular-brands">
-       <div class="header-popular">
+        <div class="header-popular">
           <h2>Популярные производители:</h2>
           <a class="btn" href="#">Все производители</a>
         </div>
@@ -157,41 +184,43 @@
       <section class="services">
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!
-        Мы стараемся изо всех сил сделать ваши покупки приятными.</p>
+          Мы стараемся изо всех сил сделать ваши покупки приятными.
+        </p>
         <ul class="services-toggle">
-            <li><button class="btn-services">Доставка</button></li>
-            <li><button class="btn-services">Гарантия</button></li>
-            <li><button class="btn-services">Кредит</button></li>
+          <li><button class="btn-services">Доставка</button></li>
+          <li><button class="btn-services">Гарантия</button></li>
+          <li><button class="btn-services">Кредит</button></li>
         </ul>
         <ul class="services-list">
+          <!-- как мне кажется, в этом разделе альтернативный текст не нужен, так как изображение чисто декоративное и особого смысла не несет http://prgssr.ru/development/alternativnyj-tekst-dlya-izobrazhenij.html#heading-alt - ссылка на эту статью также лежит в списке материалов к 3-му разделу.  -->
           <li>
             <figure class="service-item-delivery">
-              <img src="img/delivery.png" width="468" height="261" alt="">
+              <img src="img/delivery.png" width="468" height="261" alt="Доставим вовремя!">
               <figcaption>
                 <h3 class="services-list-header">Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем,
-                поднимая его на ваш этаж!
+                  к вашему подъезду совершенно бесплатно!
+                  Ведь мы неплохо заработаем,
+                  поднимая его на ваш этаж!
                 </p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure class="service-item-guarantee">
-              <img src="img/guarantee.png" width="389" height="283" alt="">
+              <img src="img/guarantee.png" width="389" height="283" alt="Гарантия 100%">
               <figcaption>
                 <h3 class="services-list-header">Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит,
-                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-                   Дом уж восстановите как-нибудь сами.
+                  а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                  Дом уж восстановите как-нибудь сами.
                 </p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure class="service-item-credit">
-              <img src="img/credit.png" width="465" height="285" alt="">
+              <img src="img/credit.png" width="465" height="285" alt="Кредит">
               <figcaption>
                 <h3 class="services-list-header">Кредит</h3>
                 <p>
@@ -213,13 +242,13 @@
         </p>
         <ul class="delivery-company-list">
           <li>
-            —  Деловые линии
+            Деловые линии
           </li>
           <li>
-            —  Автотрейдинг
+            Автотрейдинг
           </li>
           <li>
-            —  ЖелДорЭкспедиция
+            ЖелДорЭкспедиция
           </li>
         </ul>
         <a class="btn" href="#">Подробнее о компании</a>
@@ -227,7 +256,7 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, приехав в наш офис:</p>
-        <a href="#"><img src=img/mini-map.jpg width="300" height="158" alt="Карта проезда"></a>
+        <a href="#"><img src="img/mini-map.jpg" width="300" height="158" alt="Карта проезда"></a>
         <button class="btn">Заблудились? Напишите нам!</button>
       </section>
     </main>
@@ -261,9 +290,9 @@
         </p>
         <section class="footer-social">
           <ul>
-            <li><a class="social-btn social-btn-vk" href="#"><img src="img/svg/vk-icon.svg" width="21" height="21">Вконтакте</a></li>
-            <li><a class="social-btn social-btn-fb" href="#"><img src="img/svg/fb-icon.svg" width="21" height="21">Фейсбук</a></li>
-            <li><a class="social-btn social-btn-inst" href="#"><img src="img/svg/insta-icon.svg" width="21" height="21">Инстаграм</a></li>
+            <li><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
+            <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+            <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
           </ul>
         </section>
         <p>
@@ -275,7 +304,6 @@
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </section>
-
     </footer>
     <!--  <section class="modal write-us">
       *\Здесь будет форма*\
