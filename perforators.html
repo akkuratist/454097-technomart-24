@@ -14,7 +14,7 @@
             <path fill="#231F20" d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
           </svg>
           Поиск:
-        <input type="search" name="search" id="site-search">
+          <input type="search" name="search" id="site-search">
         </label>
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
@@ -79,7 +79,90 @@
       </nav>
       <h1 class="current-product">Перфораторы</h1>
       <section class="filters">
-        <!-- Здесь будет раздел сортировки и выбор ценового диапазона !-->
+        <form method="get" action="#" oninput="maxPriceVal.value = priceRange.value">
+          <fieldset>
+            <legend class="filters-type">Сортировка:</legend>
+            <ul class="sort-list">
+              <li class="sort-option">
+                <label>По цене<input class="visually-hidden filters-input radio-sort-by" type="radio" name="sort-by" value="by-price" checked>
+                </label>
+              </li>
+              <li class="sort-option">
+                <label>По типу<input class="visually-hidden filters-input radio-sort-by" type="radio" name="sort-by" value="by-type">
+                </label>
+              </li>
+              <li class="sort-option">
+                <label>По функционалу<input class="visually-hidden filters-input radio-sort-by" type="radio" name="sort-by" value="by-features">
+                </label>
+              </li>
+            </ul>
+            <ul class="sort-list">
+              <li class="sort-option">
+                <label>По возрастанию<input class="visually-hidden filters-input radio-asc" type="radio" name="sort-how" value="ascending">
+                </label>
+              </li>
+              <li class="sort-option">
+                <label>По убыванию<input class="visually-hidden filters-input radio-desc" type="radio" name="sort-how" value="descending">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend class="filters-type">Фильтр:</legend>
+            <fieldset>
+            <legend class="filters-label">Цена:</legend>
+            <input class="filter-price-range" type="range" name="priceRange" id="price-range" min="0" max="35000" step="100">
+            <input type="text" name="minPriceVal" class="price-value" disabled value="0">
+            <output class="price-value" name="maxPriceVal">30000</output>
+            </fieldset>
+            <fieldset>
+              <legend class="filters-label">Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <label class="filter-brand-name">
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" checked name="bosch"> Bosch
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label class="filter-brand-name">
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="interskol"> Интерскол
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label class="filter-brand-name">
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" checked name="Makita"> Makita
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label class="filter-brand-name">
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="DeWalt"> DeWalt
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label class="filter-brand-name">
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="Hitachi"> Hitachi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="filters-label">Питание:</legend>
+              <ul>
+                <li class="filter-option">
+                  <label>
+                  <input class="visually-hidden filters-input filters-input-radio" type="radio" name="power" value="accumulator" checked> Аккумуляторные
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                  <input class="visually-hidden filters-input filters-input-radio" type="radio" name="power" value="wired"> Сетевые
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </fieldset>
+          <button class="btn" type="submit">Показать</button>
+        </form>
       </section>
       <section class="catalog">
         <ul class="catalog-list">
@@ -146,7 +229,7 @@
       </nav>
       <section class="about-product">
         <h2>Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
       </section>
@@ -199,7 +282,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66">
           <circle cx="33" cy="33" r="33" fill="#63A63E"/>
           <path fill="#FFF" d="M49.641 21.066c-.389-.389-1.025-.389-1.414 0L29.788 39.504c-.389.389-1.025.389-1.414 0l-8.14-8.139c-.389-.389-1.025-.389-1.414 0L15.285 34.9c-.389.389-.389 1.025 0 1.414l13.089 13.09c.389.389 1.025.389 1.414 0l3.536-3.536 1.414-1.414 18.438-18.438c.389-.389.389-1.025 0-1.414l-3.535-3.536z"/>
-        </svg>Товар добавлен в корзину!
+        </svg>
+        Товар добавлен в корзину!
       </span>
       <a class="btn btn-make-order" href="#">Оформить заказ</a>
       <button class="defaul-btn">Продолжить покупки</button>

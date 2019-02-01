@@ -30,7 +30,7 @@
           </svg>
           Корзина: 0
         </a>
-        <a class="btn btn-make-order">Оформить заказ</a>
+        <a class="btn btn-make-order" href="#">Оформить заказ</a>
       </div>
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <p class="header-contacts">
@@ -156,28 +156,28 @@
         </div>
         <ul class="popular-brands-list">
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/bosch.jpg" alt="Bosch"></a>
+            <a href="#"><img src="img/brands/bosch.jpg" width="126" height="37" alt="Bosch"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/makita.jpg" alt="Makita"></a>
+            <a href="#"><img src="img/brands/makita.jpg" width="123" height="40" alt="Makita"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/dewalt.jpg" alt="DeWalt"></a>
+            <a href="#"><img src="img/brands/dewalt.jpg" width="146" height="44" alt="DeWalt"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/interskol.jpg" alt="Интерскол"></a>
+            <a href="#"><img src="img/brands/interskol.jpg" width="200" height="88" alt="Интерскол"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/hitachi.jpg" alt="Hitachi"></a>
+            <a href="#"><img src="img/brands/hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/lg.jpg" alt="LG"></a>
+            <a href="#"><img src="img/brands/lg.jpg" width="121" height="73" alt="LG"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/aeg.jpg" alt="AEG"></a>
+            <a href="#"><img src="img/brands/aeg.jpg" width="151" height="96" alt="AEG"></a>
           </li>
           <li class="popular-brands-item">
-            <a href="#"><img src="img/brands/metabo.jpg" alt="Metabo"></a>
+            <a href="#"><img src="img/brands/metabo.jpg" width="204" height="69" alt="Metabo"></a>
           </li>
         </ul>
       </section>
@@ -192,15 +192,14 @@
           <li><button class="btn-services">Кредит</button></li>
         </ul>
         <ul class="services-list">
-          <!-- как мне кажется, в этом разделе альтернативный текст не нужен, так как изображение чисто декоративное и особого смысла не несет http://prgssr.ru/development/alternativnyj-tekst-dlya-izobrazhenij.html#heading-alt - ссылка на эту статью также лежит в списке материалов к 3-му разделу.  -->
           <li>
             <figure class="service-item-delivery">
               <img src="img/delivery.png" width="468" height="261" alt="Доставим вовремя!">
               <figcaption>
                 <h3 class="services-list-header">Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо
+                <p>Мы с удовольствием доставим ваш товар прямо <br>
                   к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,
+                  Ведь мы неплохо заработаем, <br>
                   поднимая его на ваш этаж!
                 </p>
               </figcaption>
@@ -211,8 +210,8 @@
               <img src="img/guarantee.png" width="389" height="283" alt="Гарантия 100%">
               <figcaption>
                 <h3 class="services-list-header">Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит,
-                  а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                <p>Если купленный у нас товар поломается или заискрит, <br>
+                  а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </figcaption>
@@ -220,11 +219,11 @@
           </li>
           <li>
             <figure class="service-item-credit">
-              <img src="img/credit.png" width="465" height="285" alt="Кредит">
+              <img src="img/credit.png" width="465" height="285" alt="Кредит уже ждет вас!">
               <figcaption>
                 <h3 class="services-list-header">Кредит</h3>
                 <p>
-                  Залезть в долговую яму стало проще!
+                  Залезть в долговую яму стало проще! <br>
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a class="btn" href="#">Отправить заявку</a>
@@ -305,14 +304,32 @@
         </p>
       </section>
     </footer>
-    <!--  <section class="modal write-us">
-      *\Здесь будет форма*\
-          <button class="modal-close">X</button>
-         </section>
+      <section class="modal write-us">
+        <form method="post" action="#">
+          <button class="modal-close" type="reset" aria-label="закрыть окно">X</button>
+          <label>
+            Ваше имя:
+            <input class="half-width" type="text" name="username" placeholder="Имя Фамилия">
+          </label>
+          <label>
+            Ваш email:
+            <input class="half-width" type="email" name="mail" placeholder="email@example.com">
+          </label>
+          <label>Текст письма:
+            <textarea rows="10">
+             В свободной форме
+            </textarea>
+          </label>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </section>
 
-        <section class="modal modal-map">
-         <h2 class="visually-hidden">Как до нас добраться</h2>
-         <button class="modal-close">X</button>
-        </section>  -->
+      <section class="modal modal-map">
+        <a href="https://www.google.com/maps/place/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург">
+          <img src="img/map.jpg" width="940" height="446" alt="Санкт-Петербург, улица Большая Конюшенная 19/8, Карта проезда">
+        </a>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <button class="modal-close">X</button>
+      </section>
   </body>
 </html>
