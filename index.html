@@ -9,13 +9,15 @@
     <header class="main-header container">
       <a class="main-header-logo">Техномарт</a>
       <div class="top-menu">
-        <label>
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-            <path fill="#231F20" d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
-          </svg>
-          Поиск:
-          <input type="search" name="site-search">
-        </label>
+        <form method="get" action="#">
+          <label>
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+              <path fill="#231F20" d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
+            </svg>
+            Поиск:
+            <input type="search" name="site-search">
+          </label>
+        </form>
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
             <path fill="#E72C2D" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
@@ -194,7 +196,7 @@
         <ul class="services-list">
           <li>
             <figure class="service-item-delivery">
-              <img src="img/delivery.png" width="468" height="261" alt="Доставим вовремя!">
+              <img src="img/delivery.png" width="468" height="261" alt="Доставим вовремя!" aria-hidden="true">
               <figcaption>
                 <h3 class="services-list-header">Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо <br>
@@ -207,7 +209,7 @@
           </li>
           <li>
             <figure class="service-item-guarantee">
-              <img src="img/guarantee.png" width="389" height="283" alt="Гарантия 100%">
+              <img src="img/guarantee.png" width="389" height="283" alt="Гарантия 100%" aria-hidden="true">
               <figcaption>
                 <h3 class="services-list-header">Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит, <br>
@@ -219,7 +221,7 @@
           </li>
           <li>
             <figure class="service-item-credit">
-              <img src="img/credit.png" width="465" height="285" alt="Кредит уже ждет вас!">
+              <img src="img/credit.png" width="465" height="285" alt="Кредит уже ждет вас!" aria-hidden="true">
               <figcaption>
                 <h3 class="services-list-header">Кредит</h3>
                 <p>
@@ -304,32 +306,30 @@
         </p>
       </section>
     </footer>
-      <section class="modal write-us">
-        <form method="post" action="#">
-          <button class="modal-close" type="reset" aria-label="закрыть окно">X</button>
-          <label>
-            Ваше имя:
-            <input class="half-width" type="text" name="username" placeholder="Имя Фамилия">
-          </label>
-          <label>
-            Ваш email:
-            <input class="half-width" type="email" name="mail" placeholder="email@example.com">
-          </label>
-          <label>Текст письма:
-            <textarea rows="10">
-             В свободной форме
-            </textarea>
-          </label>
-          <button type="submit" class="btn">Отправить</button>
-        </form>
-      </section>
-
-      <section class="modal modal-map">
-        <a href="https://www.google.com/maps/place/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург">
-          <img src="img/map.jpg" width="940" height="446" alt="Санкт-Петербург, улица Большая Конюшенная 19/8, Карта проезда">
-        </a>
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <button class="modal-close">X</button>
-      </section>
+    <section class="modal write-us">
+      <form method="post" action="#">
+        <button class="modal-close" type="reset" aria-label="закрыть окно">X</button>
+        <label>
+        Ваше имя:
+        <input class="half-width" type="text" name="username" placeholder="Имя Фамилия">
+        </label>
+        <label>
+        Ваш email:
+        <input class="half-width" type="email" name="mail" placeholder="email@example.com">
+        </label>
+        <label for="write-us">Текст письма:
+        <textarea rows="5" placeholder="В свободной форме">
+        </textarea>
+        </label>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </section>
+    <section class="modal modal-map">
+      <a href="https://www.google.com/maps/place/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург">
+      <img src="img/map.jpg" width="940" height="446" alt="Санкт-Петербург, улица Большая Конюшенная 19/8, Карта проезда">
+      </a>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <button class="modal-close">X</button>
+    </section>
   </body>
 </html>
