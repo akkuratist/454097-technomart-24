@@ -1,0 +1,230 @@
+body {
+  padding: 0px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  color: black;
+
+  background-color: white;
+
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ .main-header {
+  background-color: #f3f7f9;
+  color: #32425c;
+}
+
+.top-menu .main-header-logo {
+  display: block;
+  height: 40px;
+  width: 220px;
+  background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
+}
+
+.top-menu .main-header-logo:hover,
+.top-menu .main-header-logo:focus {
+  background-color: #ca2c37;
+}
+
+.top-menu .main-header-logo:active {
+  background-color: #ba2732;
+}
+
+.main-header-logo img {
+  position: relative;
+  top: 11px;
+  left: 25%;
+  /*позиционирование потом будет исправлено при необходимости*/
+}
+
+.top-menu,
+.site-navigation {
+  background-color: #293449;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+
+input[type=search] {
+  border:none;
+}
+
+.top-menu a,
+.top-menu input[type=search],
+.top-menu input[type=search]::placeholder,
+.site-navigation a {
+  color: white;
+  background-color: #293449;
+}
+
+.input[type=search]::placeholder {
+  display: inline-block;
+  width: 1000px;
+}
+
+.top-menu .btn-make-order {
+  background-color: #63a63e;
+
+}
+
+.top-menu a svg,
+.search-field svg {
+  fill: #6a7180;
+}
+
+.top-menu a:hover,
+.top-menu a:focus
+
+ {
+  background-color: #212a3a;
+}
+
+.top-menu .btn-make-order:hover,
+.top-menu .btn-make-order:focus {
+  background-color: #5fbb2d;
+}
+
+.top-menu a:hover svg,
+.top-menu a:focus svg,
+.search-field:hover svg {
+  fill: white;
+}
+
+.top-menu a:active
+{
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.top-menu .btn-make-order:active {
+  background-color: #518534;
+}
+
+.top-menu a:active svg {
+  fill: #6a7180;
+}
+
+input[type=search]:focus,
+input[type=search]:focus::placeholder {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+input[type=search]:focus ~ svg {
+  fill: #f0525d;
+}
+
+.top-menu .cart {
+background-color: #ee3643;
+}
+
+.main-header h1 {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+}
+
+.header-contacts {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.header-contacts a {
+  display: block;
+
+  border: 5px solid #ffffff;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.login-link {
+  font-size: 21px;
+  line-height: 21px;
+  color: black;
+
+}
+.login-link a {
+
+display: block;
+background-color: white;
+
+}
+
+.login-link a svg {
+  fill: #c5c5c5;
+}
+
+.login-link a:hover,
+.profile-navigation a:hover {
+  color: #ee3643;
+}
+
+.login-link a:hover svg,
+.logged-in a:hover svg {
+  fill: black;
+}
+
+.logged-in a:hover {
+  color: black;
+}
+
+.login-link a:active,
+.profile-navigation a:active {
+color: rgba(0, 0, 0, 0.302);
+
+}
+
+.login-link a:active svg {
+  fill: rgba(0, 0, 0, 0.302);
+}
+
+.profile-navigation {
+  font-size: 16px;
+ text-decoration: underline;
+
+
+}
+.log-off {
+
+
+  /*Стилизация кнопки выхода будет потом*/
+
+
+}
+
+.site-navigation a {
+  display: block;
+  background-color: #32425c;
+  border-bottom: 5px solid #293449;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+background-color: #293449;
+border-bottom-color: #293449;
+}
+
+.site-navigation a:active {
+  background-color: #1d2739;
+  border-bottom-color: #1d2739;
+   color: rgba(255, 255, 255, 0.6);
+}
+
+
