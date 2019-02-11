@@ -3,50 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин "Техномарт"</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic"
+    rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="top-menu">
-          <a class="main-header-logo" href="index.html">
-          <img src="img/svg/logo-technomart.svg" width="110" height="18" alt="Техномарт">
-          </a>
-          <form class="search-field" method="get" action="#">
-            <input type="search" name="site-search" placeholder="Поиск:">
-            <button type="submit" class="btn-search">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-                <path d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
-              </svg>
-            </button>
-          </form>
-          <a href="#" class="bookmark-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
-              <path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
+      <div class="header-top">
+        <a class="main-header-logo" href="index.html">
+        <img src="img/svg/logo-technomart.svg" width="110" height="18" alt="Техномарт">
+        </a>
+        <div class="top-menu">
+        <form class="search-field" method="get" action="#">
+          <label class="visually-hidden" for="find">Искать</label>
+          <input class="search" type="search" name="site-search" placeholder="Поиск:">
+          <button type="submit" class="btn-search" id="find">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+              <path d="M17 15.586l-3.542-3.542C14.421 10.782 15 9.21 15 7.5 15 3.358 11.643 0 7.5 0 3.358 0 0 3.358 0 7.5 0 11.643 3.358 15 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5C4.467 13 2 10.532 2 7.5z"/>
             </svg>
-              Закладки: 0
-          </a>
-          <a class="cart-full" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-              <circle cx="4.5" cy="13.5" r="1.5"/>
-              <circle cx="12.5" cy="13.5" r="1.5"/>
-              <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
-            </svg>
-             Корзина: 10
-          </a>
-          <a class="btn btn-make-order" href="#">Оформить заказ</a>
+          </button>
+        </form>
+        <a href="#" class="bookmark-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
+            <path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
+          </svg>
+          Закладки: 0
+        </a>
+        <a class="cart-full" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <circle cx="4.5" cy="13.5" r="1.5"/>
+            <circle cx="12.5" cy="13.5" r="1.5"/>
+            <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/>
+          </svg>
+          Корзина: 10
+        </a>
+        <a class="btn btn-make-order" href="#">Оформить заказ</a>
       </div>
+      </div>
+      <div class="header-middle">
+        <div class="container">
       <h1 class="page-header">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <p class="header-contacts">
-        <a href="tel:+78125550555"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOSI+PHBhdGggZmlsbD0iI0I3QkZDOCIgZD0iTTE1LjU3MiAxOC45ODVoLS45NDFjLTQuMTI5LS40ODgtNy4xNTctMi40MDgtOS4zNTktNC44NjRDMy4wNjIgMTEuNjYgMS4zMTggOC40OTIuOTc4IDQuMjI4VjMuMDg0Yy4wNzgtLjc3NC40NTktMS4zMDQuODk4LTEuNzU3QzIuNDI1Ljc2NiAzLjI1LjA0NCA0LjAwMi4wMTljLjU1NC0uMDE4IDEuNS4zOCAxLjg3OS44OTkuMzI5LjQ0Ni41MDQgMS4zMzkuNjU2IDIuMDAzLjE1NC42NzEuNTA1IDEuNjQzLjQwOCAyLjI4OS0uMTQ4IDEuMDA3LTEuNDg3IDEuNDM0LTEuODc5IDIuMTY2IDEuMzA3IDMuMTM1IDMuNDQzIDUuNDM5IDYuMjkzIDcuMDMxLjcxNS0uMzkyIDEuMzQ2LTEuNTcyIDIuMzMyLTEuNTk1LjM1OS0uMDA5LjgxOC4xNzggMS4xODQuMjg2LjQwMi4xMjEuNzUuMjc1IDEuMTA0LjQwOC41OTYuMjI0IDEuNjQ4LjUyMSAyLjAwNCAxLjAyMS4zNjUuNTEzLjU3IDEuMzU2LjQ5IDEuODc5LS4xNjQgMS4wNDEtMS44NzkgMi4xOTctMi45MDEgMi41Nzl6Ii8+PC9zdmc+" width="17" height="17" alt="">+7 (812) 555-05-55</a>
+        <a href="tel:+78125550555">
+          <img src="img/svg/icon-phone.svg" width="17" height="17" alt="">+7 (812) 555-05-55
+        </a>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
       <nav class="main-navigation">
         <ul class="user-navigation">
-          <li class="login-link ">
-            <div class="logged-in">
+          <li class="login-link logged-in">
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18">
                   <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
@@ -60,11 +66,14 @@
                 </svg>
                 Выйти
               </a>
-            </div>
           </li>
           <li class="profile-navigation"><a href="#">Мои заказы</a></li>
           <li class="profile-navigation"><a href="#">Личный кабинет</a></li>
         </ul>
+      </nav>
+    </div>
+  </div>
+      <nav class="container">
         <ul class="site-navigation">
           <li><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
@@ -76,16 +85,15 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main>
       <nav class="breadcrumbs">
         <ul>
           <li>
-            <a href="index.html">
+            <a href="index.html" aria-label="Главная страница">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="#c1c6ce">
                 <path d="M3 8v4h4V8h2v4h4V8L8 3.516z"/>
                 <path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"/>
               </svg>
-              Главная
             </a>
           </li>
           <li>

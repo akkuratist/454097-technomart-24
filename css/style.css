@@ -1,14 +1,22 @@
 /* Общие стили страниц*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
 
 body {
   padding: 0px;
   min-width: 1200px;
-
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   color: black;
-
-  background-color: white;
 
 }
 
@@ -16,11 +24,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
 
 .container {
   width: 960px;
-  padding: 0px 10px 0px 10px;
-  margin: auto;
+  padding: 0px 10px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -47,20 +58,20 @@ a {
 /*    Верхнее меню        */
 
 
+.header-top,
 .top-menu {
 display: flex;
-width: 100%;
 height: 40px;
 background-color: #293449;
 margin-bottom: 47px;
 }
 
-.top-menu .main-header-logo {
-  margin-left: 130px;
+.main-header-logo {
   height: 40px;
   width: 220px;
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
+  box-sizing: content-box;
 }
 
 .main-header-logo img {
@@ -70,11 +81,11 @@ margin-bottom: 47px;
 }
 
 .search-field {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
 }
 
-input[type=search] {
+.top-menu input[type=search] {
   width: 220px;
   height: 40px;
   border: none;
@@ -87,10 +98,6 @@ input[type=search] {
   fill: white;
 }
 
-input[type=search]:hover {
-  background-color: white;
-}
-
 .top-menu a,
 .top-menu input[type=search],
 .top-menu input[type=search]::placeholder,
@@ -101,24 +108,27 @@ input[type=search]:hover {
 }
 
 .btn-search {
+  position: absolute;
+  left: 0px;
+  width: 45px;
+  height: 40px;
   border: none;
-  width: 40px;
   background-color: transparent;
 }
 
-input[type=search]:focus ~ .btn-search>svg {
+.top-menu input[type=search]:focus ~ .btn-search>svg {
   fill: #f0525d;
 }
 
-input[type=search]:focus,
-input[type=search]:focus::placeholder,
+.top-menu input[type=search]:focus,
+.top-menu input[type=search]:focus::placeholder,
 input[type=search]:focus ~ .btn-search {
   background-color: white;
   color: black;
   border: none;
 }
 
-.top-menu a:not(:first-child) {
+.top-menu a {
   width: 150px;
   text-align: center;
   line-height: 40px;
@@ -161,6 +171,10 @@ input[type=search]:focus ~ .btn-search {
   left: -10px;
 }
 
+.search-field svg {
+  left: 0px;
+}
+
 .top-menu a:hover,
 .top-menu a:focus {
   background-color: #212a3a;
@@ -201,6 +215,7 @@ background-color: #ee3643;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 45px;
 }
 
 .page-header {
@@ -242,8 +257,10 @@ background-color: #ee3643;
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   flex-direction: row;
-
+  box-sizing: content-box;
 }
 
 .login-link {
@@ -272,10 +289,12 @@ background-color: #ee3643;
 .login-link a {
 display: block;
 background-color: white;
+text-align: center;
 }
 
 .login-link svg {
   fill: #c5c5c5;
+
 }
 
 .login-link a:hover,
@@ -283,14 +302,20 @@ background-color: white;
   color: #ee3643;
 }
 
+
 .login-link:hover svg,
 .logged-in:hover svg {
   fill: black;
 }
 
+.logged-in {
+
+}
+
 .logged-in a:hover {
   color: black;
 }
+
 
 .login-link a:active,
 .profile-navigation a:active {
@@ -302,26 +327,32 @@ color: rgba(0, 0, 0, 0.302);
   fill: rgba(0, 0, 0, 0.302);
 }
 
+
 .profile-navigation {
-  font-size: 16px;
- text-decoration: underline;
-
+font-size: 16px;
+text-decoration: underline;
 }
-.log-off {
 
-
-  /*Стилизация кнопки выхода будет потом*/
-
-
-}
 
 
 /* Главная навигация   */
 
+.site-navigation {
+padding-left: 0;
+display: flex;
+justify-content: flex-start;
+flex-wrap: wrap;
+}
+
 .site-navigation a {
   display: block;
+  height: 54px;
+  line-height: 54px;
+  width: 130px;
   background-color: #32425c;
   border-bottom: 5px solid #293449;
+  text-align: center;
+  box-sizing: content-box;
 }
 
 .site-navigation a:hover,
@@ -343,6 +374,7 @@ border-bottom-color: #293449;
 /*Хлебные крошки */
 
 .breadcrumbs {
+  padding-left: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -372,48 +404,40 @@ border-bottom-color: #293449;
   display: block;
   width: 300px;
   height: 120px;
+  background-position: 75% 50%;
+  background-repeat: no-repeat;
 }
 
-.promo-item:first-child{
+.promo-materials {
   background-color: #ffbf47;
   background-image: url("../img/svg/icon-materials.svg");
   background-size: 44px 65px;
-  background-position: 75% 50%;
-  background-repeat: no-repeat;
 
 /*позиционирование и доработка потом, касается всех элементов промо*/
 }
 
-.promo-item:nth-child(2) {
+.promo-instruments {
 background-color: #3bbce3;
 background-image: url("../img/svg/icon-instruments.svg");
 background-size: 75px 61px;
-background-position: 75% 50%;
-background-repeat: no-repeat;
 }
 
-.promo-item:nth-child(3) {
+.promo-tech {
   background-color: #dc91d8;
   background-image: url("../img/svg/icon-tech.svg");
   background-size: 78px 62px;
-  background-position: 75% 50%;
-  background-repeat: no-repeat;
 }
 
-.promo-item:nth-child(4) {
+.promo-sale {
   background-color: #8ed78f;
   background-image: url("../img/svg/icon-sale.svg");
   background-size: 59px 72px;
-  background-position: 75% 50%;
-  background-repeat: no-repeat;
 }
 
-.promo-item:nth-child(5) {
+.promo-delivery {
   background-color: #ffbf47;
   background-image: url("../img/svg/icon-delivery.svg");
   background-size: 78px 63px;
-  background-position: 75% 50%;
-  background-repeat: no-repeat;
 }
 
 .promo-item h2 {
@@ -430,7 +454,7 @@ background-repeat: no-repeat;
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.102);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btn-promo:hover,
@@ -439,7 +463,7 @@ background-repeat: no-repeat;
 }
 
 .btn-promo:active {
-  background-color: rgba(0, 0, 0, 0.302);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slider ul {
@@ -503,9 +527,6 @@ background-repeat: no-repeat;
   line-height: 20px;
 }
 
-.catalog-list a {
-  color: black;
-}
 
 .catalog-item {
   width: 220px;
@@ -546,16 +567,19 @@ display:  none;
 
 /*....*/
 
-a.btn-buy {
+.catalog-list a {
   width: 130px;
+}
+
+.btn-buy {
   background-color: #63a63e;
   color: white;
   border-bottom: 3px solid #367315;
   border-radius: 2px;
 }
 
-a.btn-bookmark {
-  width: 130px;
+.btn-bookmark {
+  color: black;
   background-color: white;
   border: 3px solid #64a63f;
   border-radius: 2px;
@@ -579,8 +603,8 @@ border-bottom-color: #518534;
 }
 
 a:active.btn-bookmark {
-border-color: rgba(50, 66, 92, 0.302);
-color: rgba(50, 66, 92, 0.302);
+border-color: rgba(50, 66, 92, 0.3);
+color: rgba(50, 66, 92, 0.3);
 }
 
 .popular-brands-list,
@@ -635,7 +659,7 @@ height: 140px;
 }
 
 .sort-option a {
- color: rgba(0, 0, 0, 0.302);
+ color: rgba(0, 0, 0, 0.3);
 }
 
 .sort-option-how {
@@ -643,7 +667,7 @@ height: 140px;
 }
 
 .sort-option-how svg {
-fill: rgba(0, 0, 0, 0.302);
+fill: rgba(0, 0, 0, 0.3);
 }
 
 .sort-current a,
@@ -678,8 +702,7 @@ fill: rgba(0, 0, 0, 0.302);
   text-transform: uppercase;
 }
 
-input[type=checkbox]:disabled ~ label,
-input[type=radio]:disabled ~ label {
+.filters-input:disabled ~ label {
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -874,7 +897,7 @@ left: 25%;
 }
 
 .footer-top a:active {
-  opacity: 0.502;
+  opacity: 0.5;
 }
 
 
@@ -930,7 +953,7 @@ list-style: none;
 .write-us .modal-close {
   position: relative;
   top: 5px;
-  left: 585px;
+  right: 5px;
 }
 
 .modal-close svg {
@@ -942,8 +965,7 @@ list-style: none;
  line-height: 18px;
 }
 
-.write-us input[type=text],
-.write-us input[type=email],
+.write-us input,
 .write-us textarea {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -961,6 +983,8 @@ list-style: none;
 .write-us textarea {
   resize: none;
 }
+
+
 /*Карта*/
 
 .modal-map {
@@ -969,8 +993,8 @@ box-shadow: 0px 0px 20px black;
 
 .modal-map .modal-close {
 position: relative;
-top: -505px;
-left: 900px;
+right: 10px;
+top: 5px;
 }
 
 
