@@ -68,6 +68,7 @@ img {
 
 
  .main-header {
+  padding-bottom: 60px;
   margin-bottom: 23px;
   width: 100%;
   background-color: #f3f7f9;
@@ -244,6 +245,7 @@ background-color: #ee3643;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 45px;
+
 }
 
 .page-header {
@@ -365,20 +367,36 @@ color: rgba(0, 0, 0, 0.302);
 .profile-navigation {
 font-size: 16px;
 text-decoration: underline;
+margin: 10px 13px;
 }
 
+.profile-navigation a {
+  position: relative;
+}
+
+.orders a::after {
+  position: absolute;
+  right: -15px;
+  bottom: 8px;
+  content: "";
+  display: block;
+  background-color: #32425c;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
 
 
 /* Главная навигация   */
 
 .site-navigation {
+background-color:
 width: 100%;
 padding-left: 0;
-padding-bottom: 60px;
 display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
+justify-content: flex-start;
 }
+
 
 .site-navigation a {
   display: block;
@@ -460,7 +478,6 @@ justify-content: space-between;
   background-image: url("../img/svg/icon-materials.svg");
   background-size: 44px 65px;
 
-/*позиционирование и доработка потом, касается всех элементов промо*/
 }
 
 .promo-instruments {
@@ -520,6 +537,10 @@ background-size: 75px 61px;
 .slider-btn {
   border: none;
   background-color: transparent;
+}
+
+.slides {
+  padding-left: 0px;
 }
 
 .slider-content figcaption {
@@ -894,6 +915,10 @@ fill: rgba(0, 0, 0, 0.3);
   background-color: white;
   color: black;
   border: 1px solid #e5e5e5;
+}
+
+.btn-submit {
+
 }
 
 .pagination-list {
