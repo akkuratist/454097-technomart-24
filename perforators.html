@@ -6,14 +6,14 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic"
       rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="header-top">
         <div class="container header-top-container">
           <a class="main-header-logo" href="index.html">
-          <img src="img/svg/logo-technomart.svg" width="110" height="18" alt="Техномарт">
+          <img src="img/svg/logo-technomart.svg" width="110" height="17" alt="Техномарт">
           </a>
           <div class="top-menu">
             <form class="search-field" method="get" action="#">
@@ -31,7 +31,7 @@
               </svg>
               Закладки: 0
             </a>
-            <a class="cart-full" href="#">
+            <a class="cart cart-full" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
                 <circle cx="4.5" cy="13.5" r="1.5"/>
                 <circle cx="12.5" cy="13.5" r="1.5"/>
@@ -62,16 +62,18 @@
                   Равшан Джамшутович
                 </a>
               </li>
-              <li class="login-link">
-                <a class="log-off" href="#" aria-label="Выйти">
+              <li class="login-link log-off">
+                <a href="#" aria-label="Выйти">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17">
                     <path d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
                     <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
                   </svg>
                 </a>
               </li>
-              <li class="profile-navigation orders"><a href="#">Мои заказы</a></li>
-              <li class="profile-navigation"><a href="#">Личный кабинет</a></li>
+            </ul>
+            <ul class="profile-navigation">
+              <li class="profile-link"><a href="#">Мои заказы</a></li>
+              <li class="profile-link"><a href="#">Личный кабинет</a></li>
             </ul>
           </nav>
         </div>
@@ -137,7 +139,7 @@
               <div class="filter-price-range">
                 <div class="price-range-current">
                 </div>
-                <div class="price-range">
+                <div class="price-range-out">
                 </div>
               </div>
               <input type="text" name="min-price-value" class="price-value min-price"  value="0"> <span>—</span>
@@ -159,7 +161,7 @@
                   <label for="check-makita"> Makita</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="DeWalt" id="check-dewalt" disabled>
+                  <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="DeWalt" id="check-dewalt" >
                   <label for="check-dewalt"> DeWalt </label>
                 </li>
                 <li class="filter-option">
@@ -214,6 +216,7 @@
                 </li>
               </ul>
             </section>
+          </div>
         </section>
         <section class="catalog">
         <ul class="catalog-list catalog-list-inner">
@@ -309,7 +312,6 @@
         </li>
         </ul>
         </section>
-        </div>
       </div>
       <nav class="pagination">
         <ul class="pagination-list">
