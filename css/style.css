@@ -9,8 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
 body {
   min-width: 960px;
   padding: 0;
@@ -68,6 +66,14 @@ input[type=checkbox].visually-hidden {
   clip-path: inset(100%);
 }
 
+@font-face {
+  font-weight: normal;
+  font-size: 16px;
+  font-family: "cuprumitalic";
+
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+  url("../fonts/cuprumitalic.woff") format("woff");
+}
 
 /*-----------*/
 
@@ -125,7 +131,7 @@ input[type=checkbox].visually-hidden {
 
 .top-menu input[type=search] {
   width: 270px;
-  height: 40px;
+  height: 42px;
   padding-left: 49px;
 
   border: none;
@@ -155,7 +161,7 @@ input[type=checkbox].visually-hidden {
   left: 3px;
 
   width: 45px;
-  height: 40px;
+  height: 42px;
 
   background-color: transparent;
   border: none;
@@ -277,13 +283,15 @@ input[type=search]:focus ~ .btn-search {
   width: 320px;
   margin: 0;
   margin-top: 5px;
-  padding-right: 67px;
+  padding-right: 50px;
   padding-left: 53px;
 
-  font-style: italic;
+  font-weight: normal;
   font-size: 16px;
   line-height: 23px;
+  font-family: "cuprumitalic", "Cuprum", Arial;
   color: #ee3643;
+  letter-spacing: 0;
 }
 
 .header-contacts {
@@ -710,7 +718,31 @@ input[type=search]:focus ~ .btn-search {
   width: 185px;
 }
 
+.slider-indicators {
+  position: absolute;
+  top: 233px;
+  left: 300px;
 
+  display: flex;
+}
+
+.slider-indicator {
+  left: 30px;
+
+  display: block;
+  box-sizing: content-box;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.slider-indicator-active {
+  background-color: #ee3643;
+}
 /* Главная страница - блок популярных товаров и брендов*/
 
 .header-popular,
@@ -923,11 +955,6 @@ input[type=search]:focus ~ .btn-search {
 .no-discount  .price-current {
   margin-top: 62px;
 }
-
-/*!!!!*/
-/* Реализация кнопок кажется дико костыльной, хз что с этим пока делать*/
-
-
 
 .btn-buy,
 .btn-bookmark {
@@ -1193,6 +1220,9 @@ a:active.btn-bookmark {
   background-image: url("../img/svg/radio-on.svg");
 }
 
+.filters-input:focus ~ label {
+  outline: 1px solid #ee3643;
+}
 
 .filters-input:disabled ~ label {
   color: rgba(0, 0, 0, 0.4);
