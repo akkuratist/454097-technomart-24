@@ -94,9 +94,7 @@ img {
   background-color: #f3f7f9;
 }
 
-
 /*    Верхнее меню        */
-
 
 .header-top,
 .top-menu {
@@ -1360,25 +1358,25 @@ input[type=search]:focus ~ .btn-search {
 }
 
 
-a:hover.btn-buy,
-a:focus.btn-buy {
+.btn-buy:hover,
+.btn-buy:focus {
   background-color: #5fbb2d;
 }
 
-a:hover.btn-bookmark,
-a:focus.btn-bookmark {
+.btn-bookmark:hover,
+.btn-bookmark:focus {
   color: #32425c;
 
   background-color: white;
   border-color: #32425c;
 }
 
-a:active.btn-buy {
+.btn-buy:active {
   background-color: #518534;
   border-bottom-color: #518534;
 }
 
-a:active.btn-bookmark {
+.btn-bookmark:active {
   color: rgba(50, 66, 92, 0.3);
 
   border-color: rgba(50, 66, 92, 0.3);
