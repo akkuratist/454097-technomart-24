@@ -71,46 +71,6 @@ if (mapPopup) {
     }
   });
 };
-// Слайдер сервисы
-
-var buttonDelivery = document.querySelector(".btn-delivery");
-var serviceDelivery = document.querySelector(".service-item-delivery");
-var buttonWarranty = document.querySelector(".btn-warranty");
-var serviceWarranty = document.querySelector(".service-item-warranty");
-var buttonCredit = document.querySelector(".btn-credit");
-var serviceCredit = document.querySelector(".service-item-credit");
-
-if (buttonDelivery && buttonWarranty && buttonCredit) {
-  buttonDelivery.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    buttonDelivery.classList.add("btn-services-current");
-    serviceDelivery.classList.add("service-item-current");
-    buttonWarranty.classList.remove("btn-services-current")
-    serviceWarranty.classList.remove("service-item-current");
-    buttonCredit.classList.remove("btn-services-current");
-    serviceCredit.classList.remove("service-item-current");
-  });
-
-  buttonWarranty.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    buttonWarranty.classList.add("btn-services-current");
-    serviceWarranty.classList.add("service-item-current");
-    buttonDelivery.classList.remove("btn-services-current");
-    serviceDelivery.classList.remove("service-item-current");
-    buttonCredit.classList.remove("btn-services-current");
-    serviceCredit.classList.remove("service-item-current");
-  })
-
-  buttonCredit.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    buttonCredit.classList.add("btn-services-current");
-    serviceCredit.classList.add("service-item-current");
-    buttonDelivery.classList.remove("btn-services-current");
-    serviceDelivery.classList.remove("service-item-current");
-    buttonWarranty.classList.remove("btn-services-current")
-    serviceWarranty.classList.remove("service-item-current");
-  });
-};
 
 // Корзина
 
