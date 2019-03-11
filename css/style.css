@@ -864,6 +864,8 @@ input[type=search]:focus ~ .btn-search {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Слайды */
+
 .slider-btn {
   background-color: transparent;
   border: none;
@@ -889,10 +891,14 @@ input[type=search]:focus ~ .btn-search {
 
 .slider-btn-back {
   left: 19px;
+
+  cursor: pointer;
 }
 
 .slider-btn-next {
   right: 14px;
+
+  cursor: pointer;
 }
 
 .slider-content {
@@ -914,15 +920,19 @@ input[type=search]:focus ~ .btn-search {
   display: none;
 }
 
+
+.slider-radio:first-of-type:checked ~ .slides .slider-content-1,
+.slider-radio:nth-of-type(2):checked ~ .slides .slider-content-2,
 .slider-content-current {
   display: block;
 }
 
-.slider-radio:first-of-type:checked ~ .slides .slider-content-1,
-.slider-radio:nth-of-type(2):checked ~ .slides .slider-content-2 {
-  display: block;
+.slider-btn:focus {
+  border: 1px solid #4d90fe;
+  outline: none;
+  -webkit-box-shadow: 0 0 5px  #4d90fe;
+          box-shadow: 0 0 5px  #4d90fe;
 }
-
 
 .slider-content h2 {
   position: absolute;
@@ -983,13 +993,15 @@ input[type=search]:focus ~ .btn-search {
 }
 
 .slider-radio:first-of-type:checked ~ .slider-indicators .slider-indicator:first-child,
-.slider-radio:nth-of-type(2):checked ~ .slider-indicators .slider-indicator:nth-child(2) {
+.slider-radio:nth-of-type(2):checked ~ .slider-indicators .slider-indicator:nth-child(2),
+.slider-indicator-current {
   background-color: #ee3643;
 }
 
 .slider-indicator-active {
   background-color: #ee3643;
 }
+
 /* Главная страница - блок популярных товаров и брендов*/
 
 .header-popular {
@@ -1293,6 +1305,8 @@ input[type=search]:focus ~ .btn-search {
   padding-bottom: 7px;
 
   text-align: left;
+
+  cursor: pointer;
 }
 
 .btn-buy {
@@ -1303,6 +1317,7 @@ input[type=search]:focus ~ .btn-search {
   color: white;
 
   background-color: #63a63e;
+  border: none;
   border-bottom: 3px solid #367315;
   border-radius: 3px;
 }

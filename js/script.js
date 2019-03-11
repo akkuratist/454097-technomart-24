@@ -1,3 +1,69 @@
+// Промо-блок — слайдер
+
+var slides = document.querySelector(".slides");
+var sliderContent = document.querySelectorAll(".slider-content");
+var slideButtonBack = document.querySelector(".slider-btn-back");
+var slideButtonNext = document.querySelector(".slider-btn-next");
+var slideCounter = 0;
+var sliderRadioButtons = document.querySelectorAll(".slider-radio");
+var sliderIndicator = document.querySelectorAll(".slider-indicator");
+
+if (slides) {
+
+  sliderRadioButtons.forEach(function (item) {
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault()
+    });
+  });
+
+  sliderIndicator.forEach(function (item) {
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault();
+    });
+  });
+
+  sliderIndicator[slideCounter].classList.add("slider-indicator-current");
+  sliderContent[slideCounter].classList.add("slider-content-current");
+  sliderRadioButtons[0].getAttribute("checked");
+  sliderRadioButtons[0].removeAttribute("checked");
+
+
+  slideButtonBack.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (slideCounter > 0) {
+      slideCounter--;
+      sliderContent[slideCounter + 1].classList.remove("slider-content-current");
+      sliderContent[slideCounter].classList.add("slider-content-current");
+      sliderIndicator[slideCounter + 1].classList.remove("slider-indicator-current");
+      sliderIndicator[slideCounter].classList.add("slider-indicator-current");
+    }
+    else {
+      sliderContent[slideCounter].classList.remove("slider-content-current");
+      sliderContent[sliderContent.length - 1].classList.add("slider-content-current");
+      sliderIndicator[slideCounter].classList.remove("slider-indicator-current");
+      sliderIndicator[sliderContent.length - 1].classList.add("slider-indicator-current");
+      slideCounter = sliderContent.length - 1;
+    }
+  });
+
+  slideButtonNext.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (slideCounter < sliderContent.length - 1) {
+      slideCounter++;
+      sliderContent[slideCounter - 1].classList.remove("slider-content-current");
+      sliderContent[slideCounter].classList.add("slider-content-current");
+      sliderIndicator[slideCounter - 1].classList.remove("slider-indicator-current");
+      sliderIndicator[slideCounter].classList.add("slider-indicator-current");
+    }
+    else {
+      sliderContent[sliderContent.length - 1].classList.remove("slider-content-current");
+      sliderContent[0].classList.add("slider-content-current");
+      sliderIndicator[sliderContent.length - 1].classList.remove("slider-indicator-current");
+      sliderIndicator[0].classList.add("slider-indicator-current");
+      slideCounter = 0;
+    }
+  });
+};
 
 // Форма обратной связи
 
