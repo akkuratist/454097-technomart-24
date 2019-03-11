@@ -886,17 +886,16 @@ input[type=search]:focus ~ .btn-search {
 
 .slider-btn {
   position: absolute;
-  top: 127px;
+  top: 128px;
 }
 
 .slider-btn-back {
-  left: 19px;
-
+  left: 25px;
   cursor: pointer;
 }
 
 .slider-btn-next {
-  right: 14px;
+  right: 20px;
 
   cursor: pointer;
 }
