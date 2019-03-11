@@ -97,6 +97,7 @@ img {
 
 /*    Верхнее меню        */
 
+
 .header-top,
 .top-menu {
   display: -webkit-box;
@@ -112,6 +113,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: visible;
 }
 
 .main-header-logo {
@@ -127,6 +129,8 @@ img {
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
 }
+
+
 
 .main-header-logo img {
   position: absolute;
@@ -740,7 +744,7 @@ input[type=search]:focus ~ .btn-search {
 /* Промо-блок   Главная страница*/
 
 .promo {
-  margin-top: 60px;
+  margin-top: 36px;
 }
 
 .promo-features-list {
@@ -756,7 +760,7 @@ input[type=search]:focus ~ .btn-search {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   padding-left: 0;
 
   list-style: none;
@@ -842,7 +846,7 @@ input[type=search]:focus ~ .btn-search {
 }
 
 .promo-item h2 {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
   font-size: 24px;
   line-height: 30px;
@@ -892,6 +896,7 @@ input[type=search]:focus ~ .btn-search {
 
 .slider-btn-back {
   left: 25px;
+
   cursor: pointer;
 }
 
@@ -1938,7 +1943,7 @@ input[type=search]:focus ~ .btn-search {
 }
 
 .services h2 {
-  padding-top: 65px;
+  padding-top: 41px;
 }
 
 .services-promo {
