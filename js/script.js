@@ -90,8 +90,6 @@ if (popup) {
     popup.classList.add("show-me");
     username.focus();
   })
-}
-
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -108,7 +106,7 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
+};
 
 
 // Карта
@@ -139,12 +137,12 @@ if (mapPopup) {
 };
 
 // Корзина
-
+var innerPage = document.querySelector(".inner-page")
 var buyButtons = document.querySelectorAll(".btn-buy");
 var cartPopup = document.querySelector(".modal-cart");
 var cartClose = document.querySelector(".modal-close");
 
-if (buyButtons) {
+if (innerPage && buyButtons) {
   buyButtons.forEach(function (item) {
 
     item.addEventListener("click", function (evt) {
