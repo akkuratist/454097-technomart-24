@@ -1077,13 +1077,13 @@ input[type=search]:focus ~ .btn-search {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 253px;
   padding-right: 50px;
   padding-left: 50px;
@@ -1571,8 +1571,8 @@ input[type=search]:focus ~ .btn-search {
 
 .sort-list-how {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 60px;
   padding-right: 0;
 }
@@ -1831,6 +1831,7 @@ input[type=search]:focus ~ .btn-search {
 
   background-repeat: no-repeat;
   background-position: 0 8px;
+  opacity: 0.79;
 }
 
 .filters-input-checkbox ~ label::before {
@@ -1849,14 +1850,18 @@ input[type=search]:focus ~ .btn-search {
 .filters-input-radio:checked ~ label::before {
   background-image: url("../img/svg/radio-on.svg");
 }
-.filters-input:hover ~ label,
+
+.filters-input:hover ~ label::before {
+  opacity: 1;
+}
+
 .filters-input:focus ~ label {
   outline: 2px solid #c5c5c5;
   outline-offset: 5px;
 }
 
 .filters-input:disabled ~ label {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 
