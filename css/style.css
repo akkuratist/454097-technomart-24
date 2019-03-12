@@ -155,6 +155,24 @@ img {
   outline: none;
 }
 
+.top-menu input[type=search]::-webkit-input-placeholder {
+  position: relative;
+  top: -1px;
+  right: 1px;
+}
+
+.top-menu input[type=search]:-ms-input-placeholder {
+  position: relative;
+  top: -1px;
+  right: 1px;
+}
+
+.top-menu input[type=search]::-ms-input-placeholder {
+  position: relative;
+  top: -1px;
+  right: 1px;
+}
+
 .top-menu input[type=search]::placeholder {
   position: relative;
   top: -1px;
@@ -724,19 +742,20 @@ input[type=search]:focus ~ .btn-search {
 
 .breadcrumbs-homepage {
   position: relative;
-  left: -2px;
+  left: -15px;
 
   display: block;
-  width: 30px;
+  width: 40px;
   height: 12px;
-  margin-right: 25px;
+  margin-right: 5px;
 
   background-image: url("../img/svg/icon-home.svg");
   background-repeat: no-repeat;
+  background-position: 13px 0;
 }
 
 .breadcrumbs-homepage a::after {
-  left: 14px;
+  left: 27px;
 }
 
 
@@ -1054,9 +1073,20 @@ input[type=search]:focus ~ .btn-search {
 }
 
 .header-popular .btn {
-  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 253px;
-  padding: 10px 50px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .popular-brands .btn {
@@ -1540,7 +1570,9 @@ input[type=search]:focus ~ .btn-search {
 }
 
 .sort-list-how {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 60px;
   padding-right: 0;
 }
