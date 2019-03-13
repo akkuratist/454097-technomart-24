@@ -776,9 +776,9 @@ input[type=search]:focus ~ .btn-search {
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -821,12 +821,17 @@ input[type=search]:focus ~ .btn-search {
 
   width: 300px;
   height: 123px;
+  margin-right: 20px;
   margin-bottom: 20px;
   padding-left: 23px;
 
   background-repeat: no-repeat;
 }
 
+.promo-item:nth-child(3n),
+.promo-bottom .promo-item {
+  margin-right: 0;
+}
 
 .promo-materials {
   background-color: #ffbf47;
@@ -1550,7 +1555,7 @@ input[type=search]:focus ~ .btn-search {
   margin: 0;
   padding: 12px 0;
   padding-right: 45px;
-  padding-bottom: 11px;
+  padding-bottom: 5px;
 }
 
 .sort,
@@ -1562,6 +1567,7 @@ input[type=search]:focus ~ .btn-search {
 
 .sort-list li {
   margin-right: 0;
+  margin-bottom: 6px;
 }
 
 .sort-list-how li {
